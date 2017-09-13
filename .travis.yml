@@ -3,5 +3,5 @@ services:
 - docker
 
 language: c
-install: make build
+install: make clean build
 script: make run
