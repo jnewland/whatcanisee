@@ -2,7 +2,13 @@
 echo "$1"
 set -x
 env
-/root/amicontained
+
+if [ ! -f ./amicontained ]; then
+  curl -Lo ./amicontained https://github.com/jessfraz/amicontained/releases/download/v0.0.9/amicontained-linux-amd64
+  chmod a+x ./amicontained
+fi
+
+./amicontained
 
 ip=$(hostname -I)
 curl canhazip.com

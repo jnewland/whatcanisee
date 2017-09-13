@@ -1,7 +1,3 @@
-sudo: required
-services:
-- docker
-
+sudo: false
 language: c
-install: make clean build
-script: make run
+script: ./run.sh
