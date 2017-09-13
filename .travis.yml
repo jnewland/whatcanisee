@@ -1,3 +1,3 @@
 sudo: false
 language: c
-script: ./run.sh
+script: /bin/bash run.sh
